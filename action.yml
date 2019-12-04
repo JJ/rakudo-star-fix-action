@@ -3,4 +3,4 @@ description: 'Updates zef for RakudoStar'
 author: 'JJ'
 runs:
   using: 'node12'
-  main: 'upgrade.ps1'
+  main: 'run-ps.js'
