@@ -1,0 +1,6 @@
+name: 'Rakudo Star fix for windows'
+description: 'Updates zef for RakudoStar'
+author: 'JJ'
+runs:
+  using: 'powershell'
+  main: 'upgrade.ps1'
