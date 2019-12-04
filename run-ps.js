@@ -1,7 +1,9 @@
 // from https://stackoverflow.com/questions/10179114/execute-powershell-script-from-node-js/10181488
 
 var spawn = require("child_process").spawn,child;
-child = spawn("powershell.exe",["${process.env.GITHUB_WORKSPACE}\\upgrade.ps1"]);
+var workspace = process.env.GITHUB_WORKSPACE;
+console.log( "Workspace ${workspace}" );
+child = spawn("powershell.exe",["${workspace}\\upgrade.ps1"]);
 
 child.stdout.on("data",function(data){
     console.log("Powershell Data: " + data);
