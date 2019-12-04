@@ -2,8 +2,9 @@
 
 var spawn = require("child_process").spawn,child;
 var workspace = process.env.GITHUB_WORKSPACE;
-console.log( "Workspace ${workspace}" );
-child = spawn("powershell.exe",["${workspace}\\upgrade.ps1"]);
+var file = workspace + "\\upgrade.ps1";
+console.log( "Workspace ", workspace,  " file ", file );
+child = spawn("powershell.exe",[ file ]);
 
 child.stdout.on("data",function(data){
     console.log("Powershell Data: " + data);
